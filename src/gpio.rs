@@ -1699,7 +1699,7 @@ pub struct Bsrr {
 }
 
 impl Bsrr {
-    pub fn write<F>(&self, f: F)
+    pub fn write<F>(&mut self, f: F)
         where F: FnOnce(&mut BsrrW) -> &mut BsrrW
     {
         let mut w = BsrrW::reset_value();
