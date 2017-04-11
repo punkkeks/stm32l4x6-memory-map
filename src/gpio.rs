@@ -1695,7 +1695,7 @@ impl OdrW {
 
 # [ repr ( C ) ]
 pub struct Bsrr {
-    register: ::volatile_register::WO<u32>,
+    register: ::volatile_register::RW<u32>,
 }
 
 impl Bsrr {
@@ -1705,6 +1705,9 @@ impl Bsrr {
         let mut w = BsrrW::reset_value();
         f(&mut w);
         self.register.write(w.bits);
+    }
+    pub fn read(&self) -> BsrrR {
+        BsrrR { bits: self.register.read() }
     }
 }
 
