@@ -176,6 +176,11 @@ impl CrR {
         const OFFSET: u8 = 4u8;
         ((self.bits >> OFFSET) & MASK) as u8
     }
+    # [ doc = "Bit 3 - MSI clock range selection" ]
+    pub fn msirgsel(self) -> bool {
+        const OFFSET: u8 = 3u8;
+        self.bits & (1 << OFFSET) != 0
+    }
     # [ doc = "Bit 2 - MSI clock PLL enable" ]
     pub fn msipllen(&self) -> bool {
         const OFFSET: u8 = 2u8;
