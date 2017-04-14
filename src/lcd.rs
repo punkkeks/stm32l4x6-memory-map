@@ -737,7 +737,7 @@ impl RamCom0W {
     }
     # [ doc = r"Write value" ]
     pub fn write(&mut self, value: u32) -> &mut Self {
-        self.bits = u32;
+        self.bits = value;
         self
     }
     # [ doc = "Bit 30 - S30" ]
