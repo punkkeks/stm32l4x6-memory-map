@@ -444,7 +444,7 @@ impl SrW {
     # [ doc = "Bit 3 - Update Display Done" ]
     pub fn udd(&mut self, value: bool) -> &mut Self {
         const OFFSET: u8 = 3u8;
-        if vallue {
+        if value {
             self.bits |= 1 << OFFSET;
         } else {
             self.bits &= !(1 << OFFSET);
