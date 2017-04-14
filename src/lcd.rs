@@ -449,6 +449,7 @@ impl SrW {
         } else {
             self.bits &= !(1 << OFFSET);
         }
+        self
     }
     # [ doc = "Bit 2 - Update display request" ]
     pub fn udr(&mut self, value: bool) -> &mut Self {
