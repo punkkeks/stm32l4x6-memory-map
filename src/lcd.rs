@@ -413,6 +413,11 @@ impl SrR {
         const OFFSET: u8 = 3u8;
         self.bits & (1 << OFFSET) != 0
     }
+    # [ doc = "Bit 2 - Update display request" ]
+    pub fn udr(&self) -> bool {
+        const OFFSET: u8 = 2u8;
+        self.bits & (1 << OFFSET) != 0
+    }
     # [ doc = "Bit 1 - Start of frame flag" ]
     pub fn sof(&self) -> bool {
         const OFFSET: u8 = 1u8;
