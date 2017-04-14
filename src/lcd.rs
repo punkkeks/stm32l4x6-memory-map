@@ -441,6 +441,15 @@ impl SrW {
     pub fn reset_value() -> Self {
         SrW { bits: 32u32 }
     }
+    # [ doc = "Bit 3 - Update Display Done" ]
+    pub fn udd(&mut self, value: bool) -> &mut Self {
+        const OFFSET: u8 = 3u8;
+        if vallue {
+            self.bits |= 1 << OFFSET;
+        } else {
+            self.bits &= !(1 << OFFSET);
+        }
+    }
     # [ doc = "Bit 2 - Update display request" ]
     pub fn udr(&mut self, value: bool) -> &mut Self {
         const OFFSET: u8 = 2u8;
